@@ -36,7 +36,7 @@ EndProcedure
 
 Open_MainForm()
   
-;Déclarer l'objet FMOD System
+;DÃ©clarer l'objet FMOD System
 FMOD_System_Create(@fmodsystem)
   
 ;Initialiser le system (32 canaux) un seul suffirait pour cet exemple
@@ -53,12 +53,12 @@ Repeat
       Select GEvent
         Case #OpenFile
           
-          ;Décharge le son précédent
+          ;DÃ©charge le son prÃ©cÃ©dent
           If Sound <> 0
             FMOD_Sound_Release(Sound)
           EndIf
           
-          File = OpenFileRequester("Sélectionner un fichier mp3","","Musique|*.mp3;*.wav;*.ogg;*.flac",0)
+          File = OpenFileRequester("SÃ©lectionner un fichier mp3","","Musique|*.mp3;*.wav;*.ogg;*.flac",0)
           If File <> ""
             SetGadgetText(#File, GetFilePart(File))
             FMOD_System_CreateStream(fmodsystem, @File, #FMOD_SOFTWARE, 0, @sound)
@@ -70,7 +70,7 @@ Repeat
                   
         Case #Play  
           ;PlaySound va jouer le son sur un des canaux libre
-          ;la variable Channel contiendra le handle du canal utilisé par le son.
+          ;la variable Channel contiendra le handle du canal utilisÃ© par le son.
           FMOD_System_PlaySound(fmodsystem, #FMOD_CHANNEL_FREE, sound, 0, @channel)
           
           ;Et on ajuste le volume (le son est compris entre 0.0 et 1.0)
