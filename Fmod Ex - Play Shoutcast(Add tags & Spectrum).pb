@@ -64,8 +64,8 @@ EndProcedure
 Procedure ShowSpectrum()
   Protected Dim SpectrumArray.f(128), i.i, j.i, Max, Position.i
   
-  ;FMOD_Channel_GetSpectrum(() Récupère le spectre du signal de sortie en cours de lecture.
-  ;SpectrumArray est un tableau représente les amplitudes de chaque bande de fréquence.
+  ;FMOD_Channel_GetSpectrum(() RÃ©cupÃ¨re le spectre du signal de sortie en cours de lecture.
+  ;SpectrumArray est un tableau reprÃ©sente les amplitudes de chaque bande de frÃ©quence.
   ;Le nombre d'amplitudes doit etre une puissance de 2 (Min 64 Max 8192) 
   FMOD_Channel_GetSpectrum(Channel, SpectrumArray(), 64, 0, 0 )
   
@@ -95,7 +95,7 @@ EndProcedure
 Procedure TagUpdate(Sound)
   Protected TagCount, Tag.FMOD_TAG, i, Title.s, Artist.s, ICYName.s, ICYUrl.s
   
-  ;La fonction FMOD_Sound_GetNumTags() récupère le nombre de mots-clés appartenant à un son.
+  ;La fonction FMOD_Sound_GetNumTags() rÃ©cupÃ¨re le nombre de mots-clÃ©s appartenant Ã  un son.
   FMOD_Sound_GetNumTags(Sound, @TagCount, #Null) 
   
   For i=0 To TagCount-1      
@@ -183,7 +183,7 @@ Procedure Start()
   Open_MainForm()
   WebRadioLoad()
   
-  ;Déclarer l'objet FMOD System
+  ;DÃ©clarer l'objet FMOD System
   FMOD_System_Create(@fmodsystem)
   
   ;Initialiser le system (32 canaux) 
@@ -204,7 +204,7 @@ Procedure Start()
   ;Et on ajuste le volume (le son est compris entre 0.0 et 1.0)
   FMOD_Channel_SetVolume(Channel, 0.5)
   
-  ;le son (@Sound) et intimement lié à son canal (@Channel)
+  ;le son (@Sound) et intimement liÃ© Ã  son canal (@Channel)
   
 EndProcedure
 
