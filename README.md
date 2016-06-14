@@ -5,4 +5,6 @@ FMOD est gratuite pour une utilisation personnelle et non com
 
 fmodex.pbi est en ensemble de procédures permettant l'utilisastion de la bibliothèque fmodex avec le langage PureBasic.
 
+La version 5.50 de PureBasic ne supporte plus cet include.
+
 
